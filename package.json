@@ -1,0 +1,30 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "App to eat burgers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drausch84/Eat-Da-Burger.git"
+  },
+  "keywords": [
+    "node.js",
+    "handlebars",
+    "express.js"
+  ],
+  "author": "David Rausch",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drausch84/Eat-Da-Burger/issues"
+  },
+  "homepage": "https://github.com/drausch84/Eat-Da-Burger#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0",
+    "npm": "^6.1.0"
+  }
+}
