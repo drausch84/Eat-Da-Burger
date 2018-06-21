@@ -3,24 +3,19 @@ html {
 }
 
 body {
-	position: relative;
-	font-family: 'Poor Story', cursive;
-	font-size: 2em;
+
+    width: 75%;
+   margin: 0 auto; 
+
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+   background-color: limegreen;
 }
 
-body:after {
-	content : "";
-	display: block;
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-image: url(../assets/img/burger-background.jpg);
-	background-size: cover;
-	background-repeat:no-repeat;
-	width: 100%;
-	min-height: 100vh;
-	opacity : 0.3;
-	z-index: -1;
+#cool-burger {
+    display: block;
+   margin: auto;
 }
 
 h1 {
@@ -31,7 +26,6 @@ h1 {
 }
 
 .burgerAvailable {
-    color:ghostwhite;
     font-family: 'Gloria Hallelujah', cursive;
     font-weight: normal;
     font-size: 20px;
@@ -41,16 +35,15 @@ h1 {
     width: 100%;
     margin: 10px;
     padding: 10px;
-    background-color: black;
+    background-color: burlywood;
     border: none;
 }
 
 .burgerAvailable:hover {
-    background-color: lightgray;
+    background-color: gray;
 }
 
 .burgerEaten {
-    color:ghostwhite;
     font-family: 'Gloria Hallelujah', cursive;
     font-weight: normal;
     font-size: 20px;
@@ -59,39 +52,43 @@ h1 {
     border-radius: 25px;
     margin: 10px;
     padding: 10px;
-    background-color: darkslategray;
+    background-color: burlywood;
 }
 
 h2 {
-    text-align: center;
-   font-family: 'Poor Story', cursive;
-   font-size: 40px;
-   margin: 50px;
+     text-align: center;
+    font-family: 'Poor Story', cursive;
+    font-size: 40px;
+    margin: 50px;
 }
 
 .formContainer {
-   background-color: black;
+    background-color: #e57373;
 }
 
 .addBurgerButton {
-   font-family: 'Gloria Hallelujah', cursive;
-   font-weight: normal;
-   font-size: 20px;
-   text-align: center;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-weight: normal;
+    font-size: 20px;
+    text-align: center;
 
-   border-radius: 25px;
-   width: 100%;
-   margin: 0;
-   padding: 10px;
-   background-color: black;
-   border: none;
+    border-radius: 25px;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    background-color: #e57373;
+    border: none;
 }
 
 .addBurgerButton:active {
-  background-color: black;
+   background-color:#e57373;
 }
 
 .burgerFooter {
-  background-color: black;
-  padding: 20px 0;
+   background-color: #e57373;
+   padding: 20px 0;
+}
+a{
+    font-family: 'Gloria Hallelujah', cursive;
+    color: black;
 }
