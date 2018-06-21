@@ -14,7 +14,7 @@ body:after {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-image: url(../assets/burger-background.jpg);
+	background-image: url(../assets/img/burger-background.jpg);
 	background-size: cover;
 	background-repeat:no-repeat;
 	width: 100%;
