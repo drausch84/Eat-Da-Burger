@@ -1,5 +1,6 @@
 html {
-    background-color: black;
+    background: linear-gradient(black, silver);
+    
 }
 
 body {
@@ -10,12 +11,16 @@ body {
    display: flex;
    min-height: 100vh;
    flex-direction: column;
-   background-color: limegreen;
+   background:linear-gradient(limegreen,lightgreen);
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius: 25px;
+  
 }
 
 #cool-burger {
     display: block;
    margin: auto;
+   border-radius: 25px;
 }
 
 h1 {
@@ -56,6 +61,7 @@ h1 {
 }
 
 h2 {
+    background: linear-gradient(#e57373, red);
      text-align: center;
     font-family: 'Poor Story', cursive;
     font-size: 40px;
@@ -91,4 +97,7 @@ h2 {
 a{
     font-family: 'Gloria Hallelujah', cursive;
     color: black;
+}
+input[type="text"] {
+    font-family: 'Gloria Hallelujah', cursive;
 }

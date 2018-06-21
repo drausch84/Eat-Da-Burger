@@ -1,54 +1,29 @@
-// Import of the ORM object in order to use the functions that will interact with the database
-var orm = require("../config/orm.js");
+// Import the ORM to implement functions that will interact with the database
+var orm = require('../config/orm.js');
 
-// Creates our burger object
+// Create the burger object
 var burger = {
-// function that selects all of the burger entries
-    all: function(cb) {
-      orm.all("burgers", function(res) {
-        cb(res);
-      });
-    },
-    // A function that will take vals(an array of values) that we will insert into cols(columns to store our values)
-    create: function(table, cols, vals, cb) {
-        var queryString = "INSERT INTO " + table;
-    
-        queryString += " (";
-        queryString += cols.toString();
-        queryString += ") ";
-        queryString += "VALUES (";
-        queryString += printQuestionMarks(vals.length);
-        queryString += ") ";
-    
-        console.log(queryString);
-    
-        connection.query(queryString, vals, function(err, result) {
-          if (err) {
-            throw err;
-          }
-          cb(result);
-        });
-      },
+  // Select all burger table entries
+  selectAll: function(cb) {
+    orm.selectAll('burgers', function(res) {
+      cb(res);
+    });
+  },
 
-    //   a function that will take our objColVals object and update the columns and values
-      update: function(table, objColVals, condition, cb) {
-        var queryString = "UPDATE " + table;
-    
-        queryString += " SET ";
-        queryString += objToSql(objColVals);
-        queryString += " WHERE ";
-        queryString += condition;
-    
-        console.log(queryString);
-        connection.query(queryString, function(err, result) {
-          if (err) {
-            throw err;
-          }
-          cb(result);
-        });
-      }
-    };
-    // export of the database functions to be used in our controller file
-    module.exports = burger;
-    
-    
+  // The variables cols and vals are arrays
+  insertOne: function(cols, vals, cb) {
+    orm.insertOne('burgers', cols, vals, function(res) {
+      cb(res);
+    });
+  },
+
+  // The objColVals is an object specifying columns as object keys with associated values
+  updateOne: function(objColVals, condition, cb) {
+    orm.updateOne('burgers', objColVals, condition, function(res) {
+      cb(res);
+    });
+  }
+};
+
+// Export the database functions for the controller (burgerController.js).
+module.exports = burger;
